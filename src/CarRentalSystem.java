@@ -29,4 +29,21 @@ public class CarRentalSystem {
             System.out.println("Car is not available for rent.");
         }
     }
+
+    public void returnCar(Car car) {
+        car.returnCar();
+        Rental rentalToRemove = null;
+        for (Rental rental : rentals) {
+            if (rental.getCar() == car) {
+                rentalToRemove = rental;
+                break;
+            }
+        }
+        if (rentalToRemove != null) {
+            rentals.remove(rentalToRemove);
+
+        } else {
+            System.out.println("Car was not rented.");
+        }
+    }
 }
