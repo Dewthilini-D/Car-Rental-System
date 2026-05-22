@@ -11,4 +11,12 @@ public class CarRentalSystem {
         customers = new ArrayList<>();
         rentals = new ArrayList<>();
     }
+
+    public void addCar(Car car) {
+        cars.add(car);
+    }
+
+    public void addCustomer(Customer customer) {
+        customers.add(customer);
+    }
 }
