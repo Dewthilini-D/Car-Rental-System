@@ -24,5 +24,9 @@ class Car {
     public String getModel() {
         return model;
     }
+
+    public double calculatePrice(int rentalDays) {
+        return basePricePerDay * rentalDays;
+    }
 }
     
