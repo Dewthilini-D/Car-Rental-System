@@ -19,4 +19,14 @@ public class CarRentalSystem {
     public void addCustomer(Customer customer) {
         customers.add(customer);
     }
+
+    public void rentCar(Car car, Customer customer, int days) {
+        if (car.isAvailable()) {
+            car.rent();
+            rentals.add(new Rental(car, customer, days));
+
+        } else {
+            System.out.println("Car is not available for rent.");
+        }
+    }
 }
