@@ -6,5 +6,13 @@ public class Customer {
         this.customerId = customerId;
         this.name = name;
     }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public String getName() {
+        return name;
+    }
     
 }
